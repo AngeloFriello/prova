@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('client_name', 255);
             $table->integer('total_price');
+            $table->text('description');
             $table->timestamps();
         });
     }

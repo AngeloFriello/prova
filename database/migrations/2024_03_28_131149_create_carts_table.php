@@ -13,7 +13,11 @@ return new class extends Migration
     {
         Schema::create('carts', function (Blueprint $table) {
             $table->id();
+            $table->decimal('product_price', 8, 2);
             $table->timestamps();
+            $table->integer('quantity');
+            $table->string('product_name');
+
         });
     }
 

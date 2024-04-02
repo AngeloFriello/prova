@@ -9,9 +9,20 @@ class Payment extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'client_name',
+        'description',
+        'total_price',
+        'cart_id',
+        'product_name',
+        'product_price',
+        'quantity',
+        'user_id'
+    ];
+
     public function cart(){
 
-       return $this->hasOne(Cart::class);
+       return $this->hasMany(Cart::class);
     }
 
     public function user(){
